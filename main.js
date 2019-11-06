@@ -27,6 +27,8 @@ function query(i) {
 			team_info[i] = [teamname, member]
 			console.log(i, team_info[i])
 			query(i + 1)
+		}).catch((err) => {
+			query(i)
 		})
 	}
 }
